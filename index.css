@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Outfit&family=Red+Hat+Display&display=swap');
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+* {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
+    box-sizing: border-box;
+}
+html {
+    overflow-x: hidden;
+}
+body {
+    margin: 0;
+}
+.App {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 50%;
+}
+.card {
+    width: 25%;
+    margin: 0 auto;
+    background-color: var(--very-pale-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px var(--desaturated-blue);
+    border-radius: 1rem;
+}
+.card > div {
+    padding: 1rem;
+}
+.card-img {
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+.card-main {
+    color: var(--dark-blue);
+    text-align: center;
+}
+.card-main > .title {
+    font-size: 2em;
+    font-weight: bolder;
+}
+.card-main > .body {
+    color: var(--desaturated-blue);
+    padding: 0 3rem;
+    font-size: 1.2em;
+}
+.card-description {
+    padding: 2rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card-plan {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    padding-left: 1rem;
+}
+.card-plan > h3 {
+    margin: 0;
+}
+.card-plan > span {
+    color: var(--desaturated-blue);
+    margin-top: .25rem;
+}
+.card-link > a {
+    color: var(--bright-blue);
+}
+.payment-btn {
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: .5rem;
+    color: var(--pale-blue);
+    background-color: var(--bright-blue);
+    font-size: 1.2em;
+    margin-top: 1rem;
+}
+.cancel-btn {
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: .5rem;
+    color: var(--desaturated-blue);
+    background-color: transparent;
+    font-size: 1.2em;
+    margin-top: 1rem;
+}
+@media screen and (max-width: 1440px) {
+    .card {
+        margin: 1rem;
+        width: 40%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .card {
+        width: 90%;
+    }
+    .card-plan {
+        font-size: .9em;
+    }
+}
